@@ -1,0 +1,23 @@
+O projeto desenvolvido em linguagem C consiste em um sistema de cadastro de pessoas, criado para facilitar o armazenamento e a organização de informações pessoais. O programa permite cadastrar, listar, pesquisar e excluir pessoas por meio de um menu interativo.
+
+Inicialmente, são utilizadas duas bibliotecas: stdio.h e string.h. A primeira permite realizar entradas e saídas de dados, enquanto a segunda oferece funções para manipulação de textos. Em seguida, é definido o limite máximo de 100 cadastros por meio do comando #define MAX 100.
+
+O programa utiliza uma estrutura chamada struct, que recebe o nome, a idade e o telefone de cada pessoa. Essa estrutura facilita a organização das informações, pois reúne diferentes tipos de dados em um único registro.
+
+Também é criado um vetor chamado pessoas, responsável por armazenar os cadastros realizados. A variável quantidade controla o número de pessoas cadastradas, enquanto a variável opcao guarda a escolha feita pelo usuário no menu principal.
+
+O menu é controlado por uma estrutura de repetição chamada do while, que mantém o sistema funcionando até que o usuário escolha a opção de sair. Para identificar a operação desejada, é utilizado o comando switch, que direciona o programa para a funcionalidade correspondente.
+
+Na primeira opção, o usuário pode cadastrar uma pessoa, informando seu nome, idade e telefone. O programa verifica se ainda existe espaço disponível no vetor antes de permitir um novo cadastro. Para receber os textos, utiliza a função fgets(), enquanto a idade é recebida por meio de scanf(). Após o preenchimento dos dados, a variável quantidade é incrementada.
+
+Na segunda opção, o sistema apresenta todas as pessoas cadastradas. Para isso, utiliza um laço de repetição for, que percorre o vetor e mostra as informações de cada pessoa na tela. Caso não existam registros, o programa informa que nenhuma pessoa foi cadastrada.
+
+Na terceira opção, é possível pesquisar uma pessoa pelo nome. O usuário informa o nome desejado e o programa utiliza a função strcmp() para comparar o texto digitado com os nomes armazenados. Se encontrar uma correspondência, apresenta os dados da pessoa. Caso contrário, informa que ela não foi encontrada.
+
+Na quarta opção, o usuário pode excluir um cadastro. O programa procura o nome informado e, quando encontra a pessoa, reorganiza o vetor, deslocando os registros seguintes uma posição para trás. Depois, diminui a quantidade de cadastros armazenados.
+
+Por fim, a quinta opção encerra o sistema, exibindo uma mensagem de despedida. O comando return 0 indica que o programa terminou sua execução corretamente.
+
+Esse projeto utiliza conceitos fundamentais da programação, como variáveis, vetores, estruturas, condições, funções e laços de repetição. Além disso, demonstra como a linguagem C pode ser utilizada para desenvolver sistemas simples de gerenciamento de informações.
+
+Concluindo, o sistema de cadastro é um projeto de nível iniciante que permite compreender melhor a lógica de programação e a organização de dados. Uma melhoria futura seria implementar o armazenamento em arquivos, permitindo que as informações cadastradas continuem salvas mesmo depois que o programa for encerrado.
